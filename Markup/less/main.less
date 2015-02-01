@@ -1,0 +1,141 @@
+@color-darkblue: #20202D; 
+@color-darkblue-text: #9D9DB5; 
+@color-yellow: #FFD73C;
+
+* {
+	cursor: inherit;
+}
+body {
+	cursor: default;
+	font-family: "Avenir Next", sans-serif;
+	font-size: 115%;
+	margin: 0;
+}
+h1 {
+	font-size: 750%;
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+h2 {
+	font-size: 360%;
+	font-weight: normal;
+	text-align: center;
+}
+h3 {
+	font-weight: 400;
+	font-size: 200%;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+a {
+	color: inherit;
+	cursor: pointer;
+	opacity: 0.7;
+	text-decoration: none;
+	transition: opacity 0.4s;
+	&:hover {
+		opacity: 1;	
+	}
+}
+.text--center {
+	text-align: center;
+}
+.link--sun {
+	color: @color-yellow;
+	font-size: 200%;
+	text-decoration: none;
+}
+.switcher {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.switcher-switches {
+	display: flex;
+	font-size: 200%;
+	justify-content: space-between;
+	width: 60%;
+}
+.switch {
+	cursor: pointer;
+	&:hover {
+		color: @color-yellow;	
+	}
+	&.switch--active {
+		color: @color-darkblue-text;
+		cursor: default;
+	}
+}
+.split {
+	box-sizing: border-box;
+	display: flex;
+	padding-bottom: 4em;
+	padding-top: 4em;
+	position: relative;
+	justify-content: space-around;
+}
+.split--dark {
+	background-color: @color-darkblue;
+	color: white;
+}
+.split--intro {
+	align-items: center;
+	color: lighten(black, 20%);
+	height: 100%;
+	text-align: center;
+	width: 100%;
+	header {
+		width: 100%;
+		p {
+			font-size: 120%;
+		}
+	}
+}
+.split--about {
+	background-image: url(../img/bg-sand.svg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 10em;
+}
+.split-wrap {
+	width: 970px;
+}
+.projects {
+	display: flex;
+	flex-direction: column;
+	&:hover .project {
+		opacity: 0.3;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.project {
+	box-sizing: border-box;
+	display: flex;
+	height: 200px;
+	margin-bottom: 3em;
+	opacity: 1;
+	width: 100%;
+	&:hover {
+		opacity: 1;
+	}
+}
+.project p {
+	color: @color-darkblue-text;
+}
+.project-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 0.5em;
+	width: 2*100/3%;
+}
+.project-description {
+	margin-left: 2em;
+	width: 100/3%;
+}
+.logo--small {
+	font-size: 150%;
+}
+
