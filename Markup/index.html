@@ -18,11 +18,32 @@
       <h2>Что я&nbsp;делаю?</h2>
       <div class="switcher">
         <div class="switcher-switches">
-          <div class="switch switch--active">Дизайн</div>
-          <div class="switch">Вёрстка</div>
-          <div class="switch">Скрипты</div>
+          <div data-switch="1" class="switch switch--active">Дизайн</div>
+          <div data-switch="2" class="switch">Вёрстка</div>
+          <div data-switch="3" class="switch">Скрипты</div>
         </div>
-        <div class="switcher-content"></div>
+        <div class="switcher-slides">
+          <div data-switch="1" class="switcher-slide">
+            <div class="slide-text">
+              <p>Разрабатываю дизайн сайтов, приложений и презентаций.</p>
+              <p>Прототипы и макеты рисую в Фотошопе или Скетче. Для иконок и другой векторной графики предпочитаю Иллюстратор.</p>
+              <p>Считаю, что дизайн должен быть функциональным — создавать настроение и направлять внимание пользователя.</p>
+              <p>Предпочитаю визуально чистые решения, с хорошо читаемыми текстами.</p>
+            </div>
+          </div>
+          <div data-switch="2" class="switcher-slide">
+            <div class="slide-text">
+              <p>Верстаю свои макеты. Делаю адаптивные сайты.</p>
+              <p>Верстаю тщательно — не допускаю оторванных от слова предлогов, или дефисов вместо тире.</p>
+              <p>Использую предпроцессоры — less и jade не только ускоряют вёрстку, но и упрощают дальнейшую поддержку проекта.</p>
+              <p>Не занимаюсь поддержкой старых браузеров: все элементы будут на месте, внешний вид чуть хуже, что с того?</p>
+              <p>Хорошо знаю Bootstrap.</p>
+            </div>
+          </div>
+          <div data-switch="3" class="switcher-slide">
+            <div class="slide-text"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
