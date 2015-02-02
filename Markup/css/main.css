@@ -12,7 +12,7 @@ body {
 h1 {
   font-size: 750%;
   font-weight: 600;
-  margin-bottom: 0;
+  margin-bottom: 0.3em;
   margin-top: 0;
 }
 
@@ -25,7 +25,11 @@ h2 {
 h3 {
   font-weight: 400;
   font-size: 200%;
-  margin-bottom: 0;
+  margin-bottom: 0.4em;
+  margin-top: 0;
+}
+
+p {
   margin-top: 0;
 }
 
@@ -104,7 +108,16 @@ a:hover {
   cursor: default;
 }
 
+.switcher-slide--hidden {
+  display: none;
+}
+
 .split {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -113,12 +126,20 @@ a:hover {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 4em;
-  padding-top: 4em;
-  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  overflow: hidden;
+  padding-bottom: 4em;
+  padding-top: 4em;
+  position: relative;
 }
 
 .split--dark {
@@ -126,7 +147,7 @@ a:hover {
   color: white;
 }
 
-.split--intro {
+.split--name {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -141,11 +162,12 @@ a:hover {
   width: 100%;
 }
 
-.split--intro header {
+header {
+  text-align: center;
   width: 100%;
 }
 
-.split--intro header p {
+header p {
   font-size: 120%;
 }
 
@@ -154,6 +176,41 @@ a:hover {
   background-position: center bottom;
   background-repeat: no-repeat;
   padding-bottom: 10em;
+  padding-top: 0;
+}
+
+.split--intro {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 600px;
+  width: 100%;
+}
+
+.split--intro > .split-wrap {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .split-wrap {
@@ -219,6 +276,10 @@ a:hover {
   width: 33.333333333333336%;
 }
 
+.project--disabled {
+  display: none;
+}
+
 .logo--small {
   font-size: 150%;
 }
@@ -227,8 +288,16 @@ a:hover {
   content: '';
   display: block;
   margin: 0.5em auto 0;
-  width: 50%;
+  width: 40%;
   border-bottom: 2px solid;
+}
+
+.block {
+  margin-bottom: 4em;
+}
+
+.block:last-child {
+  margin-bottom: 0;
 }
 
 .page--lumonade .split--intro {
@@ -237,7 +306,23 @@ a:hover {
   color: white;
 }
 
-.page--lumonade .split--intro > .split-wrap {
+.page--lumonade .split--footer,
+.page--lumonade .split--main {
+  background-color: #1a1a1a;
+}
+
+.page--lumonade .split--footer {
+  background-image: url(../projects/lumonade/lumonade-fluid.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 8em;
+}
+
+.page--lumonade .split--main {
+  color: white;
+}
+
+.page--lumonade .split--main > .split-wrap {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -255,32 +340,253 @@ a:hover {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.page--lumonade .block--intro {
+  text-align: center;
+  width: 80%;
+}
+
+.page--lumonade .block--animation {
+  width: 100%;
+}
+
+.page--lumonade .block--animation object {
+  height: 500px;
+  width: 100%;
+}
+
+.page--lumonade .block--numbers {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 120%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 100%;
 }
 
-.page--lumonade .split--dark {
-  background-color: #1a1a1a;
+.page--lumonade .block--numbers > div {
+  min-width: 300px;
+}
+
+.page--lumonade .block--numbers .text-large {
+  font-size: 500%;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.page--buketroz .split--intro {
+  background-color: #333333;
+  background-image: url(../projects/buketroz/buketroz-logo.png);
+  -webkit-background-size: cover;
+  background-size: cover;
   color: white;
 }
 
-.page--lumonade .split--centered {
-  text-align: center;
+.page--buketroz .split--intro .split-waves {
+  background: url(../projects/buketroz/buketroz-wave.png) repeat-x;
+  bottom: 0;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
-.page--lumonade .split--centered > .split-wrap {
-  width: 50%;
-}
-
-.page--lumonade .split--animation > .split-wrap {
-  width: 860px;
-}
-
-.page--lumonade object {
-  height: 560px;
+.page--buketroz .split-waves {
+  background: url(../projects/buketroz/buketroz-wavelong-stroke.png) no-repeat;
+  height: 18px;
+  margin-top: 4em;
   width: 100%;
+}
+
+.page--buketroz .split--main {
+  padding-bottom: 0;
+}
+
+.page--buketroz .split--footer {
+  background-image: url(../projects/buketroz/buketroz-flower.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.page--buketroz .block--intro {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page--buketroz .block--intro .block-text {
+  font-size: 120%;
+  line-height: 1.45;
+  padding-left: 2em;
+  width: 60%;
+}
+
+.page--buketroz .block--intro .block-text a {
+  color: #6a9b00;
+}
+
+.page--buketroz .block--intro .block-image {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0;
+  flex-shrink: 0;
+}
+
+.page--buketroz .block--page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page--buketroz .block--page .block-image {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0;
+  flex-shrink: 0;
+  width: 60%;
+}
+
+.page--buketroz .block--page .block-image img {
+  max-width: 100%;
+}
+
+.page--buketroz .block--page .block-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-left: 2em;
+  padding-top: 20%;
+}
+
+.page--buketroz .block--page .block-text-about {
+  height: 40%;
+}
+
+.page--buketroz .block--page .block-text-select {
+  height: 50%;
+}
+
+.page--buketroz .block--popup {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page--hirsch .split--intro {
+  background-color: #333333;
+  background-image: url(../projects/hirsch/hirsch-logo.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.page--hirsch .split--intro header {
+  color: #96aabd;
+}
+
+.page--hirsch .split--footer,
+.page--hirsch .split--main {
+  background-color: #222f3d;
+}
+
+.page--hirsch .split--main {
+  color: white;
+  padding-bottom: 8em;
+}
+
+.page--hirsch .split--footer {
+  background-image: url(../projects/hirsch/hirsch-earth.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.page--hirsch .block--intro {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page--hirsch .block--intro .block-text {
+  font-size: 150%;
+  line-height: 1.45;
+  padding-left: 1em;
+  width: 69%;
+}
+
+.page--hirsch .block--intro .block-text a {
+  color: #6a9b00;
+}
+
+.page--hirsch .block--intro .block-image {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0;
+  flex-shrink: 0;
+  padding-right: 2em;
+}
+
+.page--hirsch .block--intro .block-image img {
+  margin-top: 60%;
 }

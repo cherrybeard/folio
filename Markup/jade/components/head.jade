@@ -1,0 +1,9 @@
+mixin head(title)
+	doctype html5
+	head
+		if title
+			title= 'Степан Гусев — '+title
+		else
+			title Степан Гусев
+		link(href='/fonts/fonts.css', rel='stylesheet')
+		link(href='/css/main.css', rel='stylesheet')

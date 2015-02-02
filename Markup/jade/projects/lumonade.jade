@@ -1,19 +1,28 @@
-doctype html5
-head
-	title Степан Гусев — Lumonade
-	link(href='/fonts/fonts.css', rel='stylesheet')
-	link(href='/css/main.css', rel='stylesheet')
+include ../components/head.jade
+
++head('Lumonade')
 body.page--lumonade
 	.split.split--intro
 		.split-wrap
 			a.logo.logo--small(href="../index.html") Степан Гусев
 			header
-				p Сделал из бутылки лампочку
-	.split.split--dark.split--centered
+				p Бутылка? Лампочка!
+	.split.split--main
 		.split-wrap
-				p.text--lead В Lumonade разрабатывают сайты и программы.
-				p.text--lead Я нарисовал анимационную заставку для презентации студии перед заказчиками
-	.split.split--dark.split--animation
-		.split-wrap
-			object(type="application/x-shockwave-flash", data="./lumonade/lumonade-animation.swf")
+			.block.block--intro
+				p.text--lead В&nbsp;Lumonade разрабатывают сайты и&nbsp;программы.
+				p.text--lead Я&nbsp;нарисовал анимационную заставку для&nbsp;презентации студии перед&nbsp;заказчиками
+			.block.block--animation
+				object(type="application/x-shockwave-flash", data="./lumonade/lumonade-animation.swf")
+			.block.block--numbers
+				div
+					p.text-large 358
+					p кадров отрисовано
+				div
+					p.text-large 48
+					p дней занял проект
+				div
+					p.text-large 0
+					p лампочек пострадало
+	.split.split--footer
 			

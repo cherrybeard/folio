@@ -1,10 +1,8 @@
-doctype html5
-head
-	title Степан Гусев
-	link(href='/fonts/fonts.css', rel='stylesheet')
-	link(href='/css/main.css', rel='stylesheet')
+include ./components/head.jade
+
++head()
 body
-	.split.split--intro
+	.split.split--name
 		.split-wrap
 			header 
 				h1 Степан Гусев
@@ -18,58 +16,55 @@ body
 					.switch(data-switch="2") Вёрстка
 					.switch(data-switch="3") Скрипты
 				.switcher-slides
-					.switcher-slide(data-switch="1")
+					.switcher-slide.switcher-slide--hidden(data-switch="1")
 						.slide-text
 							p Разрабатываю дизайн сайтов, приложений и презентаций.
 							p Прототипы и макеты рисую в Фотошопе или Скетче. Для иконок и другой векторной графики предпочитаю Иллюстратор.
 							p Считаю, что дизайн должен быть функциональным — создавать настроение и направлять внимание пользователя.
 							p Предпочитаю визуально чистые решения, с хорошо читаемыми текстами.
-					.switcher-slide(data-switch="2")
+					.switcher-slide.switcher-slide--hidden(data-switch="2")
 						.slide-text
 							p Верстаю свои макеты. Делаю адаптивные сайты.
 							p Верстаю тщательно — не допускаю оторванных от слова предлогов, или дефисов вместо тире.
 							p Использую предпроцессоры — less и jade не только ускоряют вёрстку, но и упрощают дальнейшую поддержку проекта.
 							p Не занимаюсь поддержкой старых браузеров: все элементы будут на месте, внешний вид чуть хуже, что с того?
 							p Хорошо знаю Bootstrap.
-
-
-
-					.switcher-slide(data-switch="3")
+					.switcher-slide.switcher-slide--hidden(data-switch="3")
 						.slide-text
 	.split.split--dark.split--folio
 		.split-wrap
 			h2 Проекты
 			.projects
-				a(href="./projects/travel.html").project
+				a(href="./projects/travel.html").project.project--disabled
 					.project-image(style="background-image: url(./projects/travel/cover.png);")
 					.project-description
 						h3 Viasun.travel
 						p Дизайн и&nbsp;вёрстка интернет-магазина туров
-				a(href="./projects/fis.html").project
+				a(href="./projects/fis.html").project.project--disabled
 					.project-image(style="background-image: url(./projects/fis/cover.png);")
 					.project-description
 						h3 Fis.ru
 						p Дизайн сайта-каталога товаров и&nbsp;услуг
-				a(href="./projects/csdirect.html").project
+				a(href="./projects/csdirect.html").project.project--disabled
 					.project-image(style="background-image: url(./projects/csdirect/cover.png);")
 					.project-description
 						h3 CS Директ
 						p Вёрстка промо-страницы о&nbsp;контекстной рекламе
-				a(href="./projects/hirch.html").project
-					.project-image(style="background-image: url(./projects/hirch/cover.png);")
+				a(href="./projects/hirsch.html").project
+					.project-image(style="background-image: url(./projects/hirsch/cover.png);")
 					.project-description
 						h3 Ракета индекса Хирша
-						p Презентация веб-системы для&nbsp;университета
+						p Как я&nbsp;запускал ракету в&nbsp;космос
 				a(href="./projects/buketroz.html").project
 					.project-image(style="background-image: url(./projects/buketroz/cover.png);")
 					.project-description
 						h3 Букет роз
-						p Дизайн интернет-магазина цветов
+						p Одна роза — одна страница
 				a(href="./projects/lumonade.html").project
 					.project-image(style="background-image: url(./projects/lumonade/cover.png);")
 					.project-description
 						h3 Lumonade
-						p Анимация логотипа веб-студии
+						p Бутылка? Лампочка!
 			.projects
 	.split.split--dark.split--about
 		.split-wrap

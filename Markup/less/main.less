@@ -14,7 +14,7 @@ body {
 h1 {
 	font-size: 750%;
 	font-weight: 600;
-	margin-bottom: 0;
+	margin-bottom: 0.3em;
 	margin-top: 0;
 }
 h2 {
@@ -25,7 +25,10 @@ h2 {
 h3 {
 	font-weight: 400;
 	font-size: 200%;
-	margin-bottom: 0;
+	margin-bottom: 0.4em;
+	margin-top: 0;
+}
+p {
 	margin-top: 0;
 }
 a {
@@ -70,19 +73,25 @@ a {
 		cursor: default;
 	}
 }
+.switcher-slide--hidden {
+	display: none;
+}
 .split {
+	align-items: center;
 	box-sizing: border-box;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	overflow: hidden;
 	padding-bottom: 4em;
 	padding-top: 4em;
 	position: relative;
-	justify-content: space-around;
 }
 .split--dark {
 	background-color: @color-darkblue;
 	color: white;
 }
-.split--intro {
+.split--name {
 	align-items: center;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -91,11 +100,12 @@ a {
 	min-height: 600px;
 	text-align: center;
 	width: 100%;
-	header {
-		width: 100%;
-		p {
-			font-size: 120%;
-		}
+}
+header {
+	text-align: center;
+	width: 100%;
+	p {
+		font-size: 120%;
 	}
 }
 .split--about {
@@ -103,6 +113,21 @@ a {
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	padding-bottom: 10em;
+	padding-top: 0;
+}
+.split--intro {
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	min-height: 600px;
+	width: 100%;
+	&>.split-wrap {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
 }
 .split-wrap {
 	width: 970px;
@@ -141,14 +166,23 @@ a {
 	margin-left: 2em;
 	width: 100/3%;
 }
+.project--disabled {
+	display: none;
+}
 .logo--small {
 	font-size: 150%;
 	&:after {
 		content: '';
 		display: block;
 		margin: 0.5em auto 0;
-		width: 50%;
+		width: 40%;
 		border-bottom: 2px solid;
+	}
+}
+.block {
+	margin-bottom: 4em;
+	&:last-child {
+		margin-bottom: 0;
 	}
 }
 .page--lumonade {
@@ -156,31 +190,166 @@ a {
 		background-color: lighten(black, 20%);
 		background-image: url(../projects/lumonade/lumonade-logo.png);
 		color: white;
+	}
+	.split--footer,
+	.split--main {
+		background-color: lighten(black, 10%);
+	}
+	.split--footer {
+		background-image: url(../projects/lumonade/lumonade-fluid.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		height: 8em;
+	}
+	.split--main {
+		color: white;
 		&>.split-wrap {
 			align-items: center;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
-			height: 100%;
 		}
 	}
-	.split--dark {
-		background-color: lighten(black, 10%);
-		color: white;
-	}
-	.split--centered {
+	.block--intro {
 		text-align: center;
-		&>.split-wrap {
-			width: 50%;
-		}
+		width: 80%;
 	}
-	.split--animation {
-		&>.split-wrap {
-			width: 860px;
-		}
-	}
-	object {
-		height: 560px;
+	.block--animation {
 		width: 100%;
+		object {
+			height: 500px;
+			width: 100%;
+		}
+	}
+	.block--numbers {
+		display: flex;
+		font-size: 120%;
+		justify-content: space-between;
+		&>div {
+			min-width: 300px;	
+		}
+		.text-large {
+			font-size: 500%;
+			font-weight: 600;
+			line-height: 1;
+			margin-bottom: 0;
+		}
+	}
+}
+.page--buketroz {
+	.split--intro {
+		background-color: lighten(black, 20%);
+		background-image: url(../projects/buketroz/buketroz-logo.png);
+		background-size: cover;
+		color: white;
+		.split-waves {
+			background: url(../projects/buketroz/buketroz-wave.png) repeat-x;
+			bottom: 0;
+			height: 18px;
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
+	}
+	.split-waves {
+		background: url(../projects/buketroz/buketroz-wavelong-stroke.png) no-repeat;
+		height: 18px;
+		margin-top: 4em;
+		width: 100%;
+	}
+	.split--main {
+		padding-bottom: 0;
+	}
+	.split--footer {
+		background-image: url(../projects/buketroz/buketroz-flower.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+	}
+	.block--intro {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		.block-text {
+			font-size: 120%;
+			line-height: 1.45;
+			padding-left: 2em;
+			width: 60%;
+			a {
+				color: #6a9b00;	
+			}
+		}
+		.block-image {
+			flex-shrink: 0;
+		}
+	}
+	.block--page {
+		display: flex;
+		justify-content: space-between;
+		.block-image {
+			flex-shrink: 0;
+			width: 60%;
+			img {
+				max-width: 100%;	
+			}
+		}
+		.block-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			margin-left: 2em;
+			padding-top: 20%;
+		}
+		.block-text-about {height: 40%;}
+		.block-text-select {height: 50%;}
+	}
+	.block--popup {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.page--hirsch {
+	.split--intro {
+		background-color: lighten(black, 20%);
+		background-image: url(../projects/hirsch/hirsch-logo.png);
+		background-size: cover;
+		color: white;
+		header {
+			color: #96aabd;	
+		}
+	}
+	.split--footer,
+	.split--main {
+		background-color: #222f3d;
+	}
+	.split--main {
+		color: white;
+		padding-bottom: 8em;
+	}
+	.split--footer {
+		background-image: url(../projects/hirsch/hirsch-earth.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+	}
+	.block--intro {
+		align-items: center;
+		display: flex;
+		height: 300px;
+		justify-content: space-between;
+		.block-text {
+			font-size: 150%;
+			line-height: 1.45;
+			padding-left: 1em;
+			width: 69%;
+			a {
+				color: #6a9b00;	
+			}
+		}
+		.block-image {
+			flex-shrink: 0;
+			padding-right: 2em;
+			img {
+				margin-top: 60%;	
+			}
+		}
 	}
 }
