@@ -3,10 +3,17 @@ head
 	title Степан Гусев — Lumonade
 	link(href='/fonts/fonts.css', rel='stylesheet')
 	link(href='/css/main.css', rel='stylesheet')
-body
+body.page--lumonade
 	.split.split--intro
 		.split-wrap
 			a.logo.logo--small(href="../index.html") Степан Гусев
-			header 
-				h1 Lumonade
+			header
 				p Сделал из бутылки лампочку
+	.split.split--dark.split--centered
+		.split-wrap
+				p.text--lead В Lumonade разрабатывают сайты и программы.
+				p.text--lead Я нарисовал анимационную заставку для презентации студии перед заказчиками
+	.split.split--dark.split--animation
+		.split-wrap
+			object(type="application/x-shockwave-flash", data="./lumonade/lumonade-animation.swf")
+			

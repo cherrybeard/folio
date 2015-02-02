@@ -41,6 +41,9 @@ a {
 .text--center {
 	text-align: center;
 }
+.text--lead {
+	font-size: 120%;
+}
 .link--sun {
 	color: @color-yellow;
 	font-size: 200%;
@@ -81,8 +84,11 @@ a {
 }
 .split--intro {
 	align-items: center;
+	background-position: center center;
+	background-repeat: no-repeat;
 	color: lighten(black, 20%);
 	height: 100%;
+	min-height: 600px;
 	text-align: center;
 	width: 100%;
 	header {
@@ -137,5 +143,44 @@ a {
 }
 .logo--small {
 	font-size: 150%;
+	&:after {
+		content: '';
+		display: block;
+		margin: 0.5em auto 0;
+		width: 50%;
+		border-bottom: 2px solid;
+	}
 }
-
+.page--lumonade {
+	.split--intro {
+		background-color: lighten(black, 20%);
+		background-image: url(../projects/lumonade/lumonade-logo.png);
+		color: white;
+		&>.split-wrap {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+		}
+	}
+	.split--dark {
+		background-color: lighten(black, 10%);
+		color: white;
+	}
+	.split--centered {
+		text-align: center;
+		&>.split-wrap {
+			width: 50%;
+		}
+	}
+	.split--animation {
+		&>.split-wrap {
+			width: 860px;
+		}
+	}
+	object {
+		height: 560px;
+		width: 100%;
+	}
+}

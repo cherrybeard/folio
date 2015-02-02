@@ -46,6 +46,10 @@ a:hover {
   text-align: center;
 }
 
+.text--lead {
+  font-size: 120%;
+}
+
 .link--sun {
   color: #ffd73c;
   font-size: 200%;
@@ -128,8 +132,11 @@ a:hover {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #333333;
   height: 100%;
+  min-height: 600px;
   text-align: center;
   width: 100%;
 }
@@ -214,4 +221,66 @@ a:hover {
 
 .logo--small {
   font-size: 150%;
+}
+
+.logo--small:after {
+  content: '';
+  display: block;
+  margin: 0.5em auto 0;
+  width: 50%;
+  border-bottom: 2px solid;
+}
+
+.page--lumonade .split--intro {
+  background-color: #333333;
+  background-image: url(../projects/lumonade/lumonade-logo.png);
+  color: white;
+}
+
+.page--lumonade .split--intro > .split-wrap {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.page--lumonade .split--dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.page--lumonade .split--centered {
+  text-align: center;
+}
+
+.page--lumonade .split--centered > .split-wrap {
+  width: 50%;
+}
+
+.page--lumonade .split--animation > .split-wrap {
+  width: 860px;
+}
+
+.page--lumonade object {
+  height: 560px;
+  width: 100%;
 }
