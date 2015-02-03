@@ -38,7 +38,7 @@ a {
 	text-decoration: none;
 	transition: opacity 0.4s;
 	&:hover {
-		opacity: 1;	
+		opacity: 1;
 	}
 }
 .text--center {
@@ -90,6 +90,9 @@ a {
 .split--dark {
 	background-color: @color-darkblue;
 	color: white;
+}
+.split--hidden {
+	display: none;
 }
 .split--name {
 	align-items: center;
@@ -532,4 +535,79 @@ header {
 		}
 	}
 	
+}
+.page--travel {
+	.split--intro {
+		background-color: #1b6cbc;
+		background-image: url(../projects/travel/travel-logo.jpg);
+		background-size: cover;
+		color: white;
+		header {
+			color: #c0def5;	
+		}
+	}
+	.split--footer,
+	.split--main {
+		background-color: #142039;
+	}
+	.split--main {
+		color: white;
+		overflow: visible;
+		a {
+			color: @color-yellow;
+			opacity: 1;
+			transition: color 0.3s;
+			&:hover,
+			&:focus {
+				color: white;
+			}
+		}
+	}
+	.block--intro {
+		align-items: flex-start;
+		display: flex;
+		justify-content: space-between;
+		.block-text {
+			font-size: 130%;
+			line-height: 1.4;
+			padding-left: 2em;
+			padding-top: 3em;
+			width: 60%;
+		}
+		.block-image {
+			flex-shrink: 0;
+			margin-top: -140px;
+		}
+	}
+	.block--search {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		.block-text {
+			font-size: 110%;
+			padding-bottom: 3em;
+			padding-top: 2em;
+			text-align: center;
+			width: 60%;
+		}
+	}
+	.block--pages {
+		.block-images {
+			display: flex;
+			justify-content: space-between;
+			.block-column {
+				width: 30%;
+				img {
+					margin-bottom: 3em;
+					max-width: 100%;	
+				}
+			}
+		}
+	}
+	.split--footer {
+		background-image: url(../projects/travel/travel-gyza.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		height: 10em;
+	}
 }
