@@ -2,8 +2,9 @@ mixin head(title)
 	doctype html5
 	head
 		if title
-			title= 'Степан Гусев — '+title
+			title= title+' — Степан Гусев'
 		else
 			title Степан Гусев
+		link(href='/favicon.png', rel='icon')
 		link(href='/fonts/fonts.css', rel='stylesheet')
 		link(href='/css/main.css', rel='stylesheet')

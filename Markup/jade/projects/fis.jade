@@ -1,0 +1,47 @@
+include ../components/head.jade
+
++head('Fis')
+body.page--fis
+	.split.split--intro
+		.split-wrap
+			a.logo.logo--small(href="../index.html") Степан Гусев
+			header
+				p Редизайн
+	.split.split--main
+		.split-wrap
+			.block.block--intro
+				.block-text
+					a(href="http://fis.ru") Fis.ru
+					|  — сайт, на&nbsp;котором поставщики находят своих покупателей
+				.block-image
+					img(src="./fis/fis-macbook.png")
+			.block.block--about
+				.block-text К&nbsp;2014&nbsp;году сайт порядком устарел — и по&nbsp;дизайну, и по&nbsp;юзабилити. Обновлять его планируется постепенно. Я&nbsp;начал работу с&nbsp;разработки нового внешнего вида страницы площадки.
+			.block.block--page
+				.block-image
+					img(src="./fis/fis-list.png")
+				.block-text
+					h3 Площадка
+					p Площадка — это страница со&nbsp;списком поставщиков и товаров.
+					p Я&nbsp;спроектировал четыре варианта отображения списка — на&nbsp;карте, списком товаров, списком поставщиков и плиткой.
+		.split--white
+			.split-wrap
+				.block.block--mobile
+					.block-text
+						h3 Адаптивность
+						p Для&nbsp;мобильных и планшетов я&nbsp;нарисовал отдельные макеты, на&nbsp;которых увеличен размер элементов управления и скрыта часть блоков.
+					.block-image
+						img(src="./fis/fis-iphone.png")
+		.split-wrap
+			.block.block--tablet
+				.block-image
+					img(src="./fis/fis-ipad.png")
+				.block-text
+					p Всего для&nbsp;площадки я&nbsp;отрисовал четыре размера экрана — под&nbsp;мобильные, планшеты, обычные мониторы и HD-мониторы.
+			.block.block--plans
+				.block-text
+					h3 Тарифы
+					p Для&nbsp;тарифов придумал минималистичные иконки. При&nbsp;наведении показывается подсказка сnbsp;описанием тарифа.
+				.block-image
+					img(src="./fis/fis-plan.png")
+	.split.split--footer
